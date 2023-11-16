@@ -11,7 +11,7 @@ def get_image_metadata(image_path):
                     tag_name = TAGS.get(tag, tag)
                     metadata[tag_name] = value
 
-                # Пример извлечения времени и местоположения (если доступно)
+                
                 if 'DateTime' in metadata:
                     print(f"Дата и время: {metadata['DateTime']}")
                 if 'GPSInfo' in metadata:
@@ -26,7 +26,7 @@ def get_image_metadata(image_path):
         print(f"Произошла ошибка: {str(e)}")
 
 if __name__ == "__main__":
-    image_path = "путь_к_фото.jpeg"  # Замените на путь к вашей фотографии
+    image_path = "путь_к_фото.jpeg" 
     exif_data = get_image_metadata(image_path)
     if exif_data:
         for tag, value in exif_data.items():
